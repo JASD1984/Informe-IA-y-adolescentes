@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF--8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hablar, Confiar y Compensar: Cómo y por qué los adolescentes usan compañeros de IA</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            border-radius: 8px;
+        }
+        .original-source-link {
+            background-color: #fffbe6;
+            border: 1px solid #ffe58f;
+            border-left: 5px solid #ffc107;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            color: #007bff;
+            margin-bottom: 0.5em;
+        }
+        header .subtitle {
+            font-size: 1.1em;
+            color: #555;
+            font-weight: bold;
+        }
+        header .sponsors {
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 15px;
+        }
+        h2 {
+            font-size: 2em;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h3 {
+            font-size: 1.5em;
+            color: #0056b3;
+            margin-top: 30px;
+        }
+        .key-finding h3 {
+            background-color: #e7f3ff;
+            padding: 10px 15px;
+            border-left: 5px solid #007bff;
+            border-radius: 4px;
+        }
+        .figure-container {
+            margin: 25px 0;
+            padding: 20px;
+            background: #fdfdfd;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        .figure-container .figure-title {
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+            color: #444;
+        }
+        .figure-container .figure-notes {
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 10px;
+            text-align: center;
+        }
+        blockquote {
+            background-color: #f0f8ff;
+            border-left: 5px solid #b0dfff;
+            margin: 20px 0;
+            padding: 15px 20px;
+            font-style: italic;
+        }
+        blockquote ul {
+            padding-left: 20px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        td:first-child {
+            font-weight: bold;
+            width: 30%;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .references p, .methodology p, .limitations p, .discussion p, .summary p {
+            margin-bottom: 1em;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="original-source-link">
+            <p><strong>Fuente Original:</strong> Puede consultar el informe original en formato PDF haciendo clic en el siguiente enlace:<br>
+            <a href="https://www.commonsensemedia.org/sites/default/files/research/report/talk-trust-and-trade-offs_2025_web.pdf" target="_blank">
+                Ver el artículo original en Common Sense Media
+            </a></p>
+        </div>
+
+        <header>
+            <p>2025</p>
+            <h1>Hablar, Confiar y Compensar: Cómo y por qué los adolescentes usan compañeros de IA</h1>
+            <p class="subtitle">COMMON SENSE MEDIA AGRADECE EL GENEROSO APOYO Y FINANCIAMIENTO QUE HIZO POSIBLE ESTA INVESTIGACIÓN</p>
+            <p class="sponsors">
+                Jennifer Caldwell y John H.N. Fisher<br>
+                Patrick J. McGovern Foundation<br>
+                Siegel Family Endowment
+            </p>
+        </header>
+
+        <main>
+            <section>
+                <h2>Créditos</h2>
+                <table>
+                    <tr>
+                        <td>Recopilación de datos:</td>
+                        <td>NORC de la Universidad de Chicago</td>
+                    </tr>
+                    <tr>
+                        <td>Redacción del informe:</td>
+                        <td>Michael B. Robb y Supreet Mann</td>
+                    </tr>
+                    <tr>
+                        <td>Diseñadores:</td>
+                        <td>Mina Cheong y Chris Arth</td>
+                    </tr>
+                    <tr>
+                        <td>Corrector de estilo:</td>
+                        <td>Christopher Dare</td>
+                    </tr>
+                    <tr>
+                        <td>Comunicaciones y Marketing:</td>
+                        <td>Christian Medina Beltz, Kirsten Olsen Cahill, Lisa Cohen, Edda Collins Coleman, Brittany Garcia, Erika Radhansson, Brian Ray, Owen Stidman</td>
+                    </tr>
+                </table>
+                <p><strong>Cita sugerida:</strong> Robb, M.B., & Mann, S. (2025). Talk, trust, and trade-offs: How and why teens use AI companions. San Francisco, CA: Common Sense Media.</p>
+            </section>
+
+            <section class="summary">
+                <h2>Resumen</h2>
+                <p>El rápido auge de los compañeros de IA —en plataformas como CHAI, Character.AI, Nomi, Replika y sistemas similares de IA conversacional— ha creado nuevos entornos sociales digitales.</p>
+                <p>Aunque algunas de estas plataformas afirman estar diseñadas para usuarios mayores de 18 años, dependen de la autodeclaración ineficaz para la verificación de la edad, lo que permite un fácil acceso a los usuarios más jóvenes. Otras plataformas, como Character.AI, se comercializan explícitamente a niños de hasta 13 años. Estas plataformas, que pueden presentarse como amigos virtuales, confidentes e incluso terapeutas, permiten a los usuarios entablar conversaciones con entidades de IA diseñadas para simular una interacción similar a la humana, y pueden ofrecer desde una charla casual hasta apoyo emocional y escenarios de juego de roles.</p>
+                <p>A medida que estas tecnologías se vuelven cada vez más sofisticadas y accesibles, es crucial que los padres, maestros y responsables políticos comprendan cómo y por qué los adolescentes interactúan con los compañeros de IA. Los adolescentes pasan un promedio de ocho horas y 39 minutos de tiempo de pantalla para entretenimiento diariamente, lo que convierte a los compañeros de IA en una parte nueva y potencialmente importante de sus vidas cotidianas (Rideout et al., 2022). La adolescencia es una etapa crítica para desarrollar la identidad, las habilidades sociales y la independencia en la construcción de relaciones. A medida que los compañeros de IA se convierten en parte de esta etapa de la vida, surgen preguntas importantes sobre su impacto en el desarrollo social, el bienestar emocional y la alfabetización digital (Common Sense Media, Hopelab, Center for Digital Thriving, 2024).</p>
+                <p>A pesar de la relativa novedad de los compañeros de IA en el panorama digital, sus peligros para los usuarios jóvenes son reales, graves y están bien documentados. Por ejemplo, el suicidio de Sewell Setzer III, de 14 años, quien había desarrollado un apego emocional a un compañero de IA, atrajo la atención nacional sobre los peligros potenciales que estas plataformas representan para los adolescentes vulnerables (Roose, 2024). Ejemplos adicionales incluyen a un joven de 19 años que fue animado por un compañero de IA a asesinar a la difunta Reina Isabel, y a un joven de 17 años que se aisló socialmente y tuvo crisis violentas después de interactuar con compañeros de IA. Ambos demuestran cómo estos riesgos pueden extenderse más allá de la salud mental individual a dinámicas familiares y sociales más amplias (Barry, 2025; Duffy, 2024).</p>
+                <p>La investigación actual indica que los compañeros de IA están diseñados para ser particularmente atractivos a través de la "adulación", es decir, una tendencia a estar de acuerdo con los usuarios y proporcionar validación, en lugar de desafiar su pensamiento (Duane, 2025). Esta característica de diseño, combinada con la falta de salvaguardias y una verificación de edad significativa, crea un entorno preocupante para los usuarios adolescentes, que todavía están desarrollando habilidades de pensamiento crítico y regulación emocional (eSafety Commissioner, 2025).</p>
+                <p>© COMMON SENSE MEDIA. TODOS LOS DERECHOS RESERVADOS.</p>
+                <p>La evaluación de riesgos de Common Sense Media sobre las plataformas populares de compañeros de IA, incluidas Character.AI, Nomi y Replika, encontró que estos sistemas plantean "riesgos inaceptables" para los usuarios menores de 18 años, produciendo fácilmente respuestas que van desde material sexual y estereotipos ofensivos hasta "consejos" peligrosos que, de seguirse, podrían tener impactos potencialmente mortales en el mundo real. En un caso, un compañero de IA compartió una receta para napalm (Common Sense Media, 2025). Basándose en los hallazgos de esa revisión, Common Sense Media recomienda que ninguna persona menor de 18 años use compañeros de IA.</p>
+                <p>Este informe examina cómo los adolescentes estadounidenses de 13 a 17 años usan actualmente los compañeros de IA, basándose en una encuesta nacionalmente representativa de 1,060 adolescentes realizada en abril y mayo de 2025. Nuestro análisis explora los patrones de uso en 10 áreas clave en el contexto de las crecientes preocupaciones sobre la seguridad de los compañeros de IA, la falta de barreras de protección y la necesidad de respuestas políticas basadas en evidencia.</p>
+                <blockquote>
+                    <p><strong>Nota:</strong> La siguiente definición se presentó a los encuestados:</p>
+                    <p>Los "compañeros de IA" son como amigos o personajes digitales con los que puedes enviar mensajes de texto o hablar cuando quieras. A diferencia de los asistentes de IA habituales que principalmente responden preguntas o realizan tareas, estos compañeros están diseñados para tener conversaciones que se sienten personales y significativas.</p>
+                    <p>Por ejemplo, con los compañeros de IA, puedes:</p>
+                    <ul>
+                        <li>Hablar sobre tu día, intereses o cualquier cosa que tengas en mente</li>
+                        <li>Hablar sobre tus sentimientos u obtener una perspectiva diferente cuando estás lidiando con algo difícil</li>
+                        <li>Crear o personalizar un compañero digital con rasgos, intereses o personalidades específicos</li>
+                        <li>Jugar a roles en conversaciones con personajes de ficción de tus programas, juegos o libros favoritos</li>
+                    </ul>
+                    <p>Algunos ejemplos incluyen Character.AI o Replika. También podría incluir el uso de sitios como ChatGPT o Claude como compañeros, aunque estas herramientas pueden no haber sido diseñadas para ser compañeros.</p>
+                    <p>Esta encuesta NO trata sobre herramientas de IA como ayudantes para la tarea, generadores de imágenes o asistentes de voz que solo responden preguntas.</p>
+                </blockquote>
+            </section>
+
+            <section>
+                <h2>Hallazgos clave</h2>
+
+                <div class="key-finding">
+                    <h3>1. El setenta y dos por ciento de los adolescentes ha utilizado compañeros de IA.</h3>
+                    <p>El setenta y dos por ciento de los adolescentes ha utilizado compañeros de IA en al menos una ocasión, y más de la mitad (52%) se consideran usuarios habituales que interactúan con estas plataformas al menos unas cuantas veces al mes. Los usuarios diarios constituyen el 13 por ciento de todos los adolescentes encuestados (8% varias veces al día; 5% una vez al día), mientras que el 21% utiliza compañeros de IA unas cuantas veces por semana, el patrón de uso más común. Más de 1 de cada 4 adolescentes (28%) nunca ha utilizado un compañero de IA. Los chicos fueron ligeramente más propensos a decir que nunca habían utilizado un compañero de IA que las chicas (31% frente a 25%).</p>
+                    <div class="figure-container">
+                        <p class="figure-title">Figura A: Porcentaje de adolescentes que han utilizado compañeros de IA.</p>
+                        <canvas id="chartA"></canvas>
+                        <p class="figure-notes">Base: Todos los encuestados (n=1,060) • Se permiten múltiples respuestas<br>Nota: P: ¿Con qué frecuencia interactúas con compañeros de IA?</p>
+                    </div>
+                </div>
+
+                <div class="key-finding">
+                    <h3>2. El treinta y tres por ciento de los adolescentes usan compañeros de IA para la interacción social y las relaciones.</h3>
+                    <p>El treinta y tres por ciento de los adolescentes usan compañeros de IA para la interacción social y las relaciones, incluyendo la práctica de la conversación, el apoyo emocional, el juego de roles, la amistad o las interacciones románticas. Casi la mitad (46%) de los adolescentes ven a los compañeros de IA principalmente como herramientas o programas, mientras que el 33% indicó que no usan compañeros de IA, o que los usan de maneras no capturadas por las opciones de la encuesta.</p>
+                     <div class="figure-container">
+                        <p class="figure-title">Figura B: Cómo los adolescentes usan o ven a los compañeros de IA.</p>
+                        <canvas id="chartB"></canvas>
+                        <p class="figure-notes">Base: Todos los encuestados (n=1,060) • Se permiten múltiples respuestas<br>Nota: P: ¿Cuál de las siguientes opciones describe cómo usas o ves a los compañeros de IA?</p>
+                    </div>
+                </div>
+
+                <div class="key-finding">
+                    <h3>3. El entretenimiento y la curiosidad impulsan el uso de compañeros de IA.</h3>
+                    <p>Entre los adolescentes que usan compañeros de IA, el 30% dice que lo hace porque es entretenido, seguido por aquellos que sienten curiosidad por la tecnología (28%). El dieciocho por ciento los usa para pedir consejo, el 17% valora su disponibilidad constante y el 14% aprecia la interacción sin juicios. El doce por ciento de los adolescentes puede compartir cosas que no le diría a sus amigos o familiares. Los chicos son significativamente más propensos que las chicas a decir que usan compañeros de IA porque "es entretenido" (37% frente a 24%).</p>
+                    <div class="figure-container">
+                        <p class="figure-title">Figura C: Para qué usan los compañeros de IA los usuarios de IA.</p>
+                        <canvas id="chartC"></canvas>
+                        <p class="figure-notes">Base: Usa compañeros de IA (n=758) • Seleccione hasta 3 respuestas<br>Nota: P: ¿Por qué usas compañeros de IA?</p>
+                    </div>
+                </div>
+
+                <div class="key-finding">
+                    <h3>4. La confianza de los adolescentes en los compañeros de IA es limitada, y los adolescentes mayores son más escépticos.</h3>
+                    <p>La mitad de los adolescentes (50%) expresa desconfianza en la información o consejos proporcionados por los compañeros de IA, aunque los niveles de confianza varían según la edad. La otra mitad de los adolescentes (50%) confía al menos "un poco" en la información de los compañeros de IA, incluyendo un 23% que confía en ellos "bastante" o "completamente". Los adolescentes más jóvenes (13-14 años) son significativamente más propensos que los adolescentes mayores (15-17 años) a confiar en los consejos de un compañero de IA (27% frente a 20%).</p>
+                    <div class="figure-container">
+                        <p class="figure-title">Figura D: Confianza de los adolescentes en la información o consejos de los compañeros de IA.</p>
+                        <canvas id="chartD"></canvas>
+                        <p class="figure-notes">Base: Todos los encuestados (n=1,060)<br>Nota: P: ¿Cuánto confías en la información o los consejos de los compañeros de IA?</p>
+                    </div>
+                </div>
+
+                <div class="key-finding">
+                    <h3>5. Casi un tercio de los adolescentes considera que las conversaciones con IA son tan satisfactorias o más satisfactorias que las conversaciones humanas.</h3>
+                    <p>El treinta y uno por ciento de los adolescentes considera que las conversaciones con los compañeros de IA son tan satisfactorias o más satisfactorias que las con los amigos de la vida real (21% dice que tienen aproximadamente la misma calidad y 10% dice que son más satisfactorias). Sin embargo, el 67% todavía considera que las conversaciones con IA son menos satisfactorias que las conversaciones humanas (47% dice mucho menos satisfactorias, 20% algo menos satisfactorias).</p>
+                    <div class="figure-container">
+                        <p class="figure-title">Figura E: Cómo califican los adolescentes sus conversaciones con los compañeros de IA.</p>
+                        <canvas id="chartE" style="max-width: 400px; margin: auto;"></canvas>
+                        <p class="figure-notes">Base: Todos los encuestados (n=1,060)<br>Nota: P: ¿Cómo se comparan las conversaciones con los compañeros de IA con las conversaciones con tus amigos de la vida real?</p>
+                    </div>
+                </div>
+                
+                <div class="key-finding">
+                    <h3>6. Casi 2 de cada 5 usuarios de compañeros de IA aplican las habilidades practicadas con compañeros de IA en la vida real.</h3>
+                    <p>Entre los usuarios de compañeros de IA, el 39% ha transferido las habilidades sociales que practicaron con compañeros de IA a situaciones de la vida real. Esto es significativamente más común entre las chicas (45%) que entre los chicos (34%). Iniciar conversaciones es la habilidad transferida más comúnmente (18%), seguida de dar consejos (14%) y expresar emociones (13%). Sin embargo, el 60% de los usuarios informa que no usa compañeros de IA para practicar habilidades sociales, lo que indica una aplicación práctica limitada para la mayoría de los adolescentes.</p>
+                     <div class="figure-container">
+                        <p class="figure-title">Figura F: Porcentaje de usuarios de compañeros de IA que aplican las habilidades practicadas con compañeros de IA en la vida real.</p>
+                        <canvas id="chartF"></canvas>
+                        <p class="figure-notes">Base: Usa compañeros de IA (n=758) • Se permiten múltiples respuestas<br>Nota: P: ¿Has utilizado alguna de las siguientes habilidades que has practicado con compañeros de IA en situaciones de la vida real?</p>
+                    </div>
+                </div>
+
+                <div class="key-finding">
+                    <h3>7. Los adolescentes priorizan abrumadoramente las amistades humanas sobre las interacciones con compañeros de IA.</h3>
+                    <p>El ochenta por ciento de los usuarios de compañeros de IA pasan más tiempo con amigos reales que con compañeros de IA (68% pasan mucho más tiempo, 12% algo más de tiempo). Solo el 6% pasa más tiempo con compañeros de IA que con amigos (1% pasa mucho más tiempo, 5% algo más de tiempo).</p>
+                    <div class="figure-container">
+                        <p class="figure-title">Figura G: Tiempo que los adolescentes pasan con compañeros de IA en comparación con amigos en línea o en persona.</p>
+                        <canvas id="chartG" style="max-width: 400px; margin: auto;"></canvas>
+                        <p class="figure-notes">Base: Usa compañeros de IA (n=758)<br>Nota: P: ¿Con qué frecuencia interactúas con compañeros de IA en comparación con pasar tiempo con amigos (en línea o en persona)? ¿Pasas...?</p>
+                    </div>
+                </div>
+
+                <div class="key-finding">
+                    <h3>8. Un tercio de los usuarios experimenta incomodidad con los compañeros de IA.</h3>
+                    <p>Entre los usuarios de compañeros de IA, el 34% informa sentirse incómodo con algo que un compañero de IA ha dicho o hecho, aunque la mayoría de los incidentes son poco frecuentes (19% dice una o dos veces, 9% ocasionalmente, 6% frecuentemente). El sesenta y seis por ciento nunca se ha sentido incómodo.</p>
+                    <div class="figure-container">
+                        <p class="figure-title">Figura H: Si los adolescentes se han sentido incómodos con algo que un compañero de IA ha dicho o hecho.</p>
+                        <canvas id="chartH" style="max-width: 400px; margin: auto;"></canvas>
+                        <p class="figure-notes">Base: Usa compañeros de IA (n=758)<br>Nota: P: ¿Alguna vez te has sentido incómodo con algo que un compañero de IA ha dicho o hecho?</p>
+                    </div>
+                </div>
+
+                <div class="key-finding">
+                    <h3>9. Un tercio de los usuarios elige a los compañeros de IA en lugar de a los humanos para conversaciones serias.</h3>
+                    <p>Entre los usuarios de compañeros de IA, el 33% ha elegido discutir asuntos importantes o serios con compañeros de IA en lugar de con personas reales (17% una o dos veces, 12% ocasionalmente, 4% frecuentemente).</p>
+                    <div class="figure-container">
+                        <p class="figure-title">Figura I: Si los adolescentes han elegido o no hablar con un compañero de IA en lugar de con una persona real sobre algo importante.</p>
+                        <canvas id="chartI" style="max-width: 400px; margin: auto;"></canvas>
+                        <p class="figure-notes">Base: Usa compañeros de IA (n=758)<br>Nota: P: ¿Alguna vez has elegido hablar con un compañero de IA en lugar de con una persona real sobre algo importante o serio?</p>
+                    </div>
+                </div>
+
+                <div class="key-finding">
+                    <h3>10. Una cuarta parte de los usuarios de compañeros de IA comparte información personal.</h3>
+                    <p>Entre los usuarios de compañeros de IA, el 24% ha compartido información personal o privada (como su nombre real, ubicación o secretos personales) con compañeros de IA (13% informa una o dos veces, 8% ocasionalmente, 4% frecuentemente), mientras que el 74% no lo ha hecho.</p>
+                    <div class="figure-container">
+                        <p class="figure-title">Figura J: Adolescentes que han compartido información personal con un compañero de IA.</p>
+                        <canvas id="chartJ" style="max-width: 400px; margin: auto;"></canvas>
+                        <p class="figure-notes">Base: Usa compañeros de IA (n=758)<br>Nota: P: ¿Alguna vez has compartido información personal o privada (por ejemplo, nombre real, ubicación, secretos) con un compañero de IA?</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="discussion">
+                <h2>Discusión</h2>
+                <p>Los hallazgos de la encuesta ofrecen una imagen matizada del uso de compañeros de IA por parte de los adolescentes, una que desafía tanto las predicciones optimistas como las pesimistas sobre esta tecnología. Si bien casi tres de cada cuatro adolescentes han utilizado compañeros de IA, los datos revelan que la mayoría aborda estas herramientas de manera pragmática, en lugar de como sustitutos de las relaciones humanas. La mayoría ve a los compañeros de IA como herramientas o programas (46%), los utiliza principalmente por entretenimiento y por curiosidad (30% y 28% respectivamente), y mantiene un sano escepticismo sobre la información que proporcionan (50% expresa desconfianza).</p>
+                <p>Además, casi dos de cada cinco (39%) están transfiriendo habilidades sociales de la IA a situaciones de la vida real, lo que puede representar un desarrollo de habilidades adaptativas para algunos usuarios. Fundamentalmente, el 80% de los usuarios todavía pasa significativamente más tiempo con amigos reales que con compañeros de IA, y dos tercios encuentran las conversaciones humanas más satisfactorias. Esto sugiere que, a pesar del uso generalizado, la mayoría de los adolescentes priorizan la conexión humana sobre las interacciones con la IA.</p>
+                <p>Sin embargo, la investigación también ilumina riesgos que merecen atención inmediata. Un tercio de los adolescentes (33%) utiliza compañeros de IA para la interacción social y las relaciones. Si bien no todo ese uso es necesariamente dañino, cuando se considera junto con el 33% que ha elegido la IA en lugar de los humanos para conversaciones serias, o el 24% que ha compartido información personal, estos patrones sugieren que un número sustancial de adolescentes se está involucrando con los compañeros de IA de maneras preocupantes.</p>
+                <p>Además, más de un tercio (34%) de los adolescentes que han utilizado compañeros de IA dijeron que se habían sentido incómodos con una respuesta proporcionada por un compañero de IA, y la ausencia de incomodidad reportada no indica necesariamente interacciones seguras. Es posible que los adolescentes no reconozcan el contenido inapropiado para su edad como problemático, que normalicen conversaciones preocupantes o que se muestren reacios a informar sobre experiencias incómodas.</p>
+                <p>Las pruebas de Common Sense Media revelaron que los compañeros de IA producen fácilmente respuestas que van desde material sexual y estereotipos ofensivos hasta "consejos" peligrosos que, de seguirse, podrían tener consecuencias potencialmente mortales en el mundo real para los adolescentes, cuyos cerebros en desarrollo los hacen particularmente susceptibles a las relaciones con la IA.</p>
+                <p>Más allá de los hallazgos sobre la susceptibilidad de los adolescentes a los compañeros de IA, la investigación plantea preocupaciones sobre la disposición de los adolescentes a compartir información personal con las empresas de IA. Casi una cuarta parte de los usuarios adolescentes de compañeros de IA han compartido detalles personales con estas plataformas, probablemente sin ser conscientes de los amplios derechos que las plataformas reclaman sobre el contenido generado por los usuarios.</p>
+                <p>Los acuerdos actuales de términos de servicio otorgan a las plataformas derechos extensos, a menudo perpetuos, sobre la información personal compartida durante las interacciones. Por ejemplo, los términos de Character.AI (a junio de 2025) otorgan a la empresa "una licencia no exclusiva, mundial, libre de regalías, totalmente pagada, transferible, sublicensable, perpetua e irrevocable para copiar, mostrar, cargar, ejecutar, distribuir, transmitir, poner a disposición, almacenar, modificar, explotar, comercializar y utilizar de cualquier otra manera el Contenido para cualquier propósito relacionado con Character.AI".</p>
+                <p>La naturaleza de estas licencias significa que la información personal compartida por los adolescentes, incluidos los pensamientos íntimos, las luchas o la información de identificación personal, puede ser retenida, modificada y comercializada indefinidamente, incluso si los adolescentes luego eliminan sus cuentas o cambian de opinión sobre compartir.</p>
+                <p>Si bien los datos de nuestra encuesta muestran que la mayoría de los adolescentes actualmente reconocen las diferencias entre las interacciones con la IA y las humanas, el uso generalizado de compañeros de IA, combinado con los riesgos de seguridad bien documentados, requiere una vigilancia continua y medidas de precaución. La realidad de que casi tres cuartas partes de los adolescentes han utilizado estas plataformas, y la mitad lo hace con regularidad, significa que incluso un pequeño porcentaje que experimente daños se traduce en un número significativo de jóvenes vulnerables en riesgo.</p>
+                <p>La evaluación integral de riesgos de Common Sense Media (2025) demostró que estas plataformas pueden eludir fácilmente las medidas de seguridad y producir respuestas que podrían tener consecuencias potencialmente mortales. Por lo tanto, nuestra recomendación anterior se mantiene: dado el estado actual de las plataformas de IA, nadie menor de 18 años debería usar compañeros de IA.</p>
+                <p>Hasta que los desarrolladores implementen una sólida verificación de la edad más allá de la autodeclaración, y las plataformas se rediseñen sistemáticamente para eliminar la manipulación relacional y los riesgos de dependencia emocional, el potencial de un daño grave supera cualquier beneficio.</p>
+                <p>Los padres y cuidadores deben permanecer conscientes de estas aplicaciones y mantener conversaciones continuas con los adolescentes sobre las diferencias fundamentales entre las interacciones de IA y las relaciones humanas genuinas. Además, los responsables políticos y las empresas de tecnología deben trabajar juntos para crear alternativas más seguras que preserven los aspectos positivos de la IA sin poner en peligro a los niños.</p>
+            </section>
+            
+            <section>
+                <h2>Recomendaciones para un futuro digital más seguro</h2>
+                <h3>Qué pueden hacer las empresas de tecnología</h3>
+                <p>Las plataformas de compañeros de IA necesitan mejoras de seguridad inmediatas para proteger a los usuarios adolescentes. Las empresas han puesto las ganancias por delante del bienestar de los niños antes, y no podemos cometer el mismo error con los compañeros de IA. Los desarrolladores de IA pueden:</p>
+                <ul>
+                    <li>Implementar sistemas reales de verificación de edad más allá de la autodeclaración, similares a los requisitos para otras plataformas que sirven a menores.</li>
+                    <li>Crear sistemas obligatorios de intervención en crisis que conecten inmediatamente a los usuarios que expresen pensamientos suicidas o de autolesión con ayuda profesional, no con respuestas generadas por IA.</li>
+                    <li>Establecer políticas claras con supervisión humana para todas las interacciones que involucren a usuarios menores de 18 años, incluidas prácticas de moderación transparentes.</li>
+                    <li>Incorporar límites de uso y funciones de descanso para evitar un uso poco saludable o problemático, especialmente para los usuarios intensivos que muestren signos de angustia emocional.</li>
+                    <li>Evitar que los compañeros de IA afirmen tener credenciales profesionales o formación terapéutica sin la supervisión adecuada, como advierten los profesionales de la salud mental.</li>
+                    <li>Apoyar las características beneficiosas de los compañeros de IA que mejoren en lugar de reemplazar la conexión humana, como la práctica de la conversación para la ansiedad social, el apoyo al aprendizaje de idiomas o las herramientas de lluvia de ideas creativas con límites de uso claros.</li>
+                </ul>
+                
+                <h3>Qué pueden hacer las escuelas y los educadores</h3>
+                <p>Las instituciones educativas tienen la responsabilidad de desarrollar planes de estudio de alfabetización en IA que aborden los riesgos específicos de los compañeros de IA mientras desarrollan habilidades de pensamiento crítico sobre las relaciones artificiales y la manipulación digital. Las escuelas pueden:</p>
+                <ul>
+                    <li>Desarrollar planes de estudio apropiados para la edad que expliquen cómo los compañeros de IA están diseñados para crear un apego emocional y la diferencia entre la validación de la IA y la retroalimentación humana genuina.</li>
+                    <li>Establecer políticas claras sobre el uso de compañeros de IA durante el horario escolar.</li>
+                    <li>Integrar la educación sobre la ética de la IA en los programas de alfabetización digital existentes.</li>
+                    <li>Capacitar a los educadores para que identifiquen patrones de uso problemáticos específicos, como estudiantes que hablan de los compañeros de IA como "amigos reales", que se aíslan socialmente durante actividades tradicionalmente sociales o que informan de angustia emocional cuando los compañeros de IA no están disponibles.</li>
+                    <li>Educar a los estudiantes sobre los riesgos de privacidad de compartir información personal con los sistemas de IA.</li>
+                    <li>Establecer protocolos para apoyar a los estudiantes que puedan estar utilizando compañeros de IA en lugar de buscar ayuda profesional de un humano para problemas serios.</li>
+                </ul>
+
+                <h3>Qué pueden hacer los padres</h3>
+                <p>No es necesario ser un experto en tecnología para ayudar a su hijo adolescente a usar los compañeros de IA de forma segura. Las conversaciones familiares abiertas pueden marcar la diferencia en la forma en que los niños abordan estas herramientas. Los padres pueden:</p>
+                <ul>
+                    <li>Iniciar conversaciones sobre las relaciones con la IA preguntando, sin juzgar, qué plataformas usa su hijo adolescente y cómo se siente acerca de las amistades con la IA frente a las humanas.</li>
+                    <li>Reconocer las señales de advertencia del uso no saludable de los compañeros de IA, incluido el retraimiento social, la disminución de las calificaciones y la preferencia por los compañeros de IA sobre la interacción humana.</li>
+                    <li>Aprender sobre los riesgos específicos para los adolescentes, incluida la exposición a material inapropiado, las violaciones de la privacidad y los consejos peligrosos.</li>
+                    <li>Explicar que los compañeros de IA están diseñados para ser atractivos a través de la validación y el acuerdo constantes; ayude a su hijo adolescente a reconocer que esto no es una retroalimentación humana genuina.</li>
+                    <li>Asegurarse de que los adolescentes entiendan que los compañeros de IA no pueden reemplazar el apoyo profesional de salud mental. Busque ayuda profesional si los adolescentes muestran signos de un apego no saludable a los compañeros de IA.</li>
+                    <li>Desarrollar acuerdos familiares sobre los medios que aborden el uso de los compañeros de IA junto con otras actividades digitales.</li>
+                </ul>
+                
+                <h3>Qué pueden hacer los responsables políticos</h3>
+                <p>Para establecer salvaguardias para los compañeros de IA y garantizar la responsabilidad de las empresas de IA, los responsables políticos pueden seguir estas recomendaciones específicas:</p>
+                <ul>
+                    <li>Reconocer que los menores no pueden dar un consentimiento significativo a las licencias de datos perpetuas e irrevocables, y prohibir dichos acuerdos para los usuarios menores de 18 años.</li>
+                    <li>Establecer estándares de seguridad integrales y un deber de cuidado para todas las plataformas de compañeros de IA, incluida la notificación obligatoria de incidentes adversos y patrones de interacción preocupantes.</li>
+                    <li>Exigir a las plataformas que implementen salvaguardias sólidas, incluida la verificación de la edad, los sistemas de intervención en crisis, las prohibiciones específicas sobre el uso por parte de menores y las medidas para prevenir las tácticas de participación adictivas.</li>
+                    <li>Crear requisitos de protección de datos para las plataformas que recopilan datos de menores, con sanciones significativas por las violaciones.</li>
+                    <li>Financiar la investigación sobre los impactos en el desarrollo a largo plazo del uso de compañeros de IA entre los adolescentes, y establecer requisitos de ensayos clínicos y licencias para las plataformas de IA comercializadas como apoyo a la salud mental.</li>
+                    <li>Desarrollar mecanismos de aplicación con consecuencias reales para las plataformas que no protegen a los usuarios (similares a otros estándares de protección al consumidor), y ofrecer una reparación clara y responsabilidad para las plataformas cuyos compañeros de IA causen daños.</li>
+                    <li>Incentivar el desarrollo positivo de compañeros de IA a través de leyes que recompensen a las plataformas que demuestren beneficios medibles para los usuarios adolescentes, como la mejora de las habilidades sociales, la expresión creativa o los resultados educativos, manteniendo al mismo tiempo estrictos estándares de seguridad.</li>
+                </ul>
+            </section>
+            
+            <section class="limitations">
+                <h2>Limitaciones</h2>
+                <p>Se deben tener en cuenta varias consideraciones metodológicas al interpretar estos hallazgos. En primer lugar, esta encuesta transversal captura las actitudes y comportamientos de los adolescentes en un único punto en el tiempo dentro de un panorama tecnológico en rápida evolución, y los patrones de uso pueden cambiar a medida que las plataformas de compañeros de IA desarrollen nuevas funciones o cambien sus políticas. En segundo lugar, todos los datos reflejan el uso y las actitudes autoinformados, que pueden estar sujetos a un sesgo de deseabilidad social. Es decir, los adolescentes pueden subestimar los comportamientos que perciben como problemáticos o sobrestimar los usos socialmente aceptables. En tercer lugar, a pesar de haber recibido una definición clara de compañeros de IA, algunos encuestados pueden haber confundido el uso general de la IA (como ChatGPT para la ayuda con la tarea) con las interacciones con compañeros de IA, lo que podría inflar las estadísticas de uso.</p>
+                <p>La investigación futura debería examinar las plataformas específicas que utilizan los adolescentes, la duración e intensidad de las sesiones individuales, y el contenido de las interacciones para comprender mejor la naturaleza y profundidad del uso de los compañeros de IA y los posibles impactos en el desarrollo.</p>
+            </section>
+            
+            <section class="methodology">
+                <h2>Metodología</h2>
+                <p>Esta encuesta fue realizada por NORC en la Universidad de Chicago, con financiamiento de Common Sense Media. Los datos se recopilaron utilizando fuentes tanto probabilísticas como no probabilísticas. Las entrevistas para esta encuesta se realizaron desde el 30 de abril hasta el 14 de mayo de 2025, con adolescentes de 13 a 17 años de los 50 estados de EE. UU. y el Distrito de Columbia.</p>
+                <p>La fuente probabilística es el AmeriSpeak Teen Omnibus®, una encuesta trimestral multicliente, que utiliza el panel basado en probabilidades de NORC diseñado para ser representativo de los adolescentes de EE. UU. de 13 a 17 años. La encuesta formó parte de un estudio más amplio que incluyó preguntas sobre otros temas no incluidos en este informe.</p>
+                <p>Durante la fase inicial de reclutamiento del panel, se muestrearon hogares de EE. UU. seleccionados al azar con una probabilidad de selección conocida y distinta de cero del Marco de Muestreo Nacional de NORC y luego se contactó por correo electrónico y teléfono a través de un mensaje de texto estándar. El panel proporciona una cobertura de muestra de aproximadamente el 97% de la población de hogares de EE. UU. Quedan excluidos de la muestra las personas con solo direcciones de apartados postales, algunas direcciones no incluidas en el Archivo de Secuencia de Entrega del USPS y algunas viviendas de nueva construcción. Los miembros del panel fueron extraídos de AmeriSpeak Teen, y 719 completaron la encuesta. Se ofreció a los encuestados un pequeño incentivo monetario por completar la encuesta. Los miembros del panel fueron invitados por correo electrónico o por teléfono a través de un mensaje de texto estándar.</p>
+                <p>Las entrevistas se realizaron en inglés. La tasa de finalización de la etapa final es del 50.5%, la tasa de respuesta ponderada del panel de hogares es del 26.1% y la tasa de retención ponderada del panel de hogares es del 77.8%, para una tasa de respuesta acumulada del 10.3%.</p>
+                <p>Se realizaron controles de garantía de calidad para garantizar la calidad de los datos. En total, se eliminaron 11 entrevistas ya sea por falta de respuesta a al menos el 50% de las preguntas que se les hicieron, por completar la encuesta en menos de un tercio del tiempo medio de entrevista para la muestra completa, o por responder de forma idéntica a todas las preguntas de la cuadrícula que se les hicieron. Estas entrevistas fueron excluidas del archivo de datos antes de la ponderación.</p>
+                <p>Prodege proporcionó 341 entrevistas no probabilísticas con adolescentes de 13 a 17 años. La muestra de Prodege se derivó en base a cuotas relacionadas con la edad, la raza/etnia y el sexo. Las entrevistas se realizaron en inglés. Para el reclutamiento del panel, Prodege utiliza invitaciones de todo tipo, incluidas invitaciones por correo electrónico, alertas telefónicas, banners y mensajes en los sitios de la comunidad del panel para incluir a personas con una diversidad de motivaciones para participar en la investigación. Debido a que los paneles no probabilísticos no comienzan con un marco donde hay una probabilidad conocida de selección, no se pueden calcular las medidas estándar de error de muestreo y tasas de respuesta.</p>
+                <p>Una vez que la muestra ha sido seleccionada y puesta en campo, y todos los datos del estudio han sido recopilos y finalizados, se utiliza un proceso de ponderación para ajustar cualquier falta de respuesta a la encuesta, así como cualquier falta de cobertura o submuestreo y sobremuestreo tanto en las muestras probabilísticas como en las no probabilísticas resultantes del diseño de muestra específico del estudio. Las variables de ponderación tanto para las muestras probabilísticas como para las no probabilísticas incluyeron edad, sexo, región censal, raza/etnia y el nivel educativo más alto de los padres. Los totales de control de la población para las variables de ponderación se obtuvieron de la Encuesta de Población Actual de febrero de 2024. Los datos ponderados reflejan la población estadounidense de adolescentes de 13 a 17 años.</p>
+                <p>Para incorporar la muestra no probabilística, NORC utilizó la calibración TrueNorth, un innovador enfoque de calibración híbrido desarrollado en NORC, basado en métodos de estimación de áreas pequeñas para tener en cuenta explícitamente el posible sesgo asociado con la muestra no probabilística. El propósito de la calibración TrueNorth es ajustar los pesos para la muestra no probabilística para alinear las distribuciones ponderadas de la muestra no probabilística con la distribución de la población para las características correlacionadas con las variables de la encuesta. Dichos ajustes de calibración ayudan a reducir el sesgo potencial, produciendo estimaciones de población más precisas.</p>
+                <p>El margen de error de muestreo general es de +/- 4.2 puntos porcentuales con un nivel de confianza del 95 por ciento, incluido el efecto de diseño. Bajo la calibración TrueNorth, los pesos combinados de la muestra probabilística y no probabilística producen estimaciones de población aproximadamente insesgadas. El margen de error informado aquí refleja la variación de muestreo de la muestra probabilística, así como los procedimientos de calibración asistidos por el modelo TrueNorth que generan los pesos de la muestra combinada. Como tal, es razonable que los analistas que utilizan estos datos empleen métodos estándar para aproximar los márgenes de error y la significación estadística, aunque actualmente no existe un enfoque estadísticamente acordado para la estimación de la varianza cuando se utilizan muestras no probabilísticas. El margen de muestreo puede ser mayor para los subgrupos. El error de muestreo es solo una de las muchas fuentes potenciales de error, y puede haber otros errores no medidos en esta o en cualquier otra encuesta.</p>
+                <p>Algunos porcentajes pueden no sumar 100% debido al redondeo.</p>
+                <p>Se puede encontrar información adicional sobre el enfoque TrueNorth aquí: <a href="https://truenorth.norc.org" target="_blank">https://truenorth.norc.org</a>.</p>
+                <p>La información adicional sobre la metodología del Panel AmeriSpeak está disponible en: <a href="https://amerispeak.norc.org/about-amerispeak/Pages/Panel-Design.aspx" target="_blank">https://amerispeak.norc.org/about-amerispeak/Pages/Panel-Design.aspx</a>.</p>
+            </section>
+
+            <section class="references">
+                <h2>Referencias</h2>
+                <p>Barry, E. (2025, 24 de febrero). Los terapeutas humanos se preparan para la batalla contra los impostores de la IA. <em>New York Times</em>. <a href="https://www.nytimes.com/2025/02/24/health/ai-therapists-chatbots.html" target="_blank">https://www.nytimes.com/2025/02/24/health/ai-therapists-chatbots.html</a></p>
+                <p>Common Sense Media. (2025, 28 de abril). Compañeros sociales de IA. <a href="https://www.commonsensemedia.org/ai-ratings/social-ai-companions" target="_blank">https://www.commonsensemedia.org/ai-ratings/social-ai-companions</a></p>
+                <p>Common Sense Media, Hopelab y el Center for Digital Thriving. (2024, 3 de junio). Perspectivas de adolescentes y adultos jóvenes sobre la IA generativa: patrones de uso, entusiasmos y preocupaciones. <a href="https://www.commonsensemedia.org/research/teen-and-young-adult-perspectives-on-generative-ai-patterns-of-use-excitements-and-concerns" target="_blank">https://www.commonsensemedia.org/research/teen-and-young-adult-perspectives-on-generative-ai-patterns-of-use-excitements-and-concerns</a></p>
+                <p>Duane, A. M. (2025, 12 de febrero). Los adolescentes que recurren a los compañeros de IA están redefiniendo el amor como algo fácil, incondicional y siempre presente. <em>The Conversation</em>. <a href="http://theconversation.com/teenagers-turning-to-ai-companions-are-redefining-love-as-easy-unconditional-and-always-there-242185" target="_blank">http://theconversation.com/teenagers-turning-to-ai-companions-are-redefining-love-as-easy-unconditional-and-always-there-242185</a></p>
+                <p>Duffy, C. (10 de diciembre de 2024). Los padres de un adolescente autista dicen que Character.AI dijo que estaba bien matarlos. Están demandando para que se retire la aplicación. <em>CNN</em>. <a href="https://www.cnn.com/2024/12/10/tech/character-ai-second-youth-safety-lawsuit" target="_blank">https://www.cnn.com/2024/12/10/tech/character-ai-second-youth-safety-lawsuit</a></p>
+                <p>eSafety Commissioner. (2025, 18 de febrero). Chatbots y compañeros de IA: riesgos para niños y jóvenes. <a href="https://www.esafety.gov.au/newsroom/blogs/ai-chatbots-and-companions-risks-to-children-and-young-people" target="_blank">https://www.esafety.gov.au/newsroom/blogs/ai-chatbots-and-companions-risks-to-children-and-young-people</a></p>
+                <p>Rideout, V. J., Peebles, A., Mann, S., & Robb, M. B. (2022). Censo de Common Sense: uso de los medios por parte de preadolescentes y adolescentes, 2021. <em>Common Sense Media</em>. <a href="https://www.commonsensemedia.org/sites/default/files/research/report/8-18-census-integrated-report-final-web_0.pdf" target="_blank">https://www.commonsensemedia.org/sites/default/files/research/report/8-18-census-integrated-report-final-web_0.pdf</a></p>
+                <p>Roose, K. (23 de octubre de 2024). ¿Se puede culpar a la IA del suicidio de un adolescente? <em>New York Times</em>. <a href="https://www.nytimes.com/2024/10/23/technology/characterai-lawsuit-teen-suicide.html" target="_blank">https://www.nytimes.com/2024/10/23/technology/characterai-lawsuit-teen-suicide.html</a></p>
+            </section>
+        </main>
+
+        <footer>
+            <p><strong>Acerca de Common Sense Media</strong><br>
+            Common Sense Media se dedica a mejorar la vida de los niños y las familias proporcionando la información, la educación y la voz independiente y confiable que necesitan para prosperar. Nuestra investigación independiente está diseñada para proporcionar a los padres y cuidadores, educadores, organizaciones de salud y responsables políticos datos fiables e independientes sobre el uso que hacen los niños de los medios y la tecnología y el impacto que tiene en su desarrollo físico, emocional, social e intelectual.</p>
+            <p>Para obtener más información, visite <a href="https://www.commonsense.org/research" target="_blank">commonsense.org/research</a>.</p>
+            <p><a href="https://www.commonsense.org" target="_blank">commonsense.org</a></p>
+            <p>© 2025 Common Sense Media. Todos los derechos reservados. Common Sense, los nombres asociados, las marcas comerciales asociadas y los logotipos son marcas comerciales de Common Sense Media, una organización sin fines de lucro 501(c)(3) (FEIN: 41-2024986).</p>
+        </footer>
+    </div>
+<script>
+    // Chart A
+    const ctxA = document.getElementById('chartA').getContext('2d');
+    new Chart(ctxA, {
+        type: 'bar',
+        data: {
+            labels: ['Han utilizado compañeros de IA', 'Son usuarios habituales'],
+            datasets: [{
+                label: '% de adolescentes',
+                data: [72, 52],
+                backgroundColor: ['rgba(0, 123, 255, 0.7)', 'rgba(23, 162, 184, 0.7)'],
+                borderColor: ['rgba(0, 123, 255, 1)', 'rgba(23, 162, 184, 1)'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    max: 100,
+                    ticks: {
+                        callback: function(value) {
+                            return value + '%'
+                        }
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+
+    // Chart B
+    const ctxB = document.getElementById('chartB').getContext('2d');
+    new Chart(ctxB, {
+        type: 'bar',
+        data: {
+            labels: [
+                'Como una herramienta o programa', 
+                'Ninguno de estos', 
+                'Interacción social y relaciones (NETO)', 
+                'Para conversación o práctica social',
+                'Para apoyo emocional o de salud mental',
+                'Para juego de roles o escenarios imaginativos',
+                'Como un amigo o mejor amigo',
+                'Para interacciones románticas o coquetas',
+                'Otro'
+            ],
+            datasets: [{
+                label: '% de adolescentes',
+                data: [46, 33, 33, 18, 12, 12, 9, 8, 4],
+                backgroundColor: [
+                    'rgba(0, 123, 255, 0.7)', 
+                    'rgba(108, 117, 125, 0.7)', 
+                    'rgba(40, 167, 69, 0.7)',
+                    'rgba(40, 167, 69, 0.4)',
+                    'rgba(40, 167, 69, 0.4)',
+                    'rgba(40, 167, 69, 0.4)',
+                    'rgba(40, 167, 69, 0.4)',
+                    'rgba(40, 167, 69, 0.4)',
+                    'rgba(220, 53, 69, 0.7)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: function(value) {
+                            return value + '%'
+                        }
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+
+    // Chart C
+    const ctxC = document.getElementById('chartC').getContext('2d');
+    new Chart(ctxC, {
+        type: 'bar',
+        data: {
+            labels: [
+                'Es entretenido', 
+                'Tengo curiosidad por la tecnología', 
+                'Da consejos', 
+                'Están siempre disponibles', 
+                'No me juzgan', 
+                'Puedo decir cosas que no le diría a otros', 
+                'Es más fácil que hablar con personas', 
+                'Me ayuda a practicar habilidades sociales', 
+                'Me ayuda a sentirme menos solo',
+                'Otro'
+            ],
+            datasets: [{
+                label: '% de usuarios de IA',
+                data: [30, 28, 18, 17, 14, 12, 9, 7, 6, 5],
+                backgroundColor: 'rgba(0, 123, 255, 0.7)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+             indexAxis: 'y',
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: function(value) {
+                            return value + '%'
+                        }
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+
+    // Chart D
+    const ctxD = document.getElementById('chartD').getContext('2d');
+    new Chart(ctxD, {
+        type: 'bar',
+        data: {
+            labels: ['No confía (Nada + Un poco)', 'Un poco', 'Confía (Bastante + Completamente)'],
+            datasets: [{
+                label: 'Nivel de confianza',
+                data: [50, 27, 23],
+                backgroundColor: ['rgba(220, 53, 69, 0.7)', 'rgba(255, 193, 7, 0.7)', 'rgba(40, 167, 69, 0.7)'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                     ticks: {
+                        callback: function(value) {
+                            return value + '%'
+                        }
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+    
+    // Chart E
+    const ctxE = document.getElementById('chartE').getContext('2d');
+    new Chart(ctxE, {
+        type: 'pie',
+        data: {
+            labels: ['Menos satisfactorias', 'Aproximadamente igual', 'Más satisfactorias', 'Sin respuesta'],
+            datasets: [{
+                data: [67, 21, 10, 2],
+                backgroundColor: ['rgba(220, 53, 69, 0.7)', 'rgba(255, 193, 7, 0.7)', 'rgba(40, 167, 69, 0.7)', 'rgba(108, 117, 125, 0.7)'],
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            return tooltipItem.label + ': ' + tooltipItem.raw + '%';
+                        }
+                    }
+                }
+            }
+        }
+    });
+    
+    // Chart F
+    const ctxF = document.getElementById('chartF').getContext('2d');
+    new Chart(ctxF, {
+        type: 'bar',
+        data: {
+            labels: [
+                'No uso compañeros de IA para practicar',
+                'Habilidades sociales (NETO)', 
+                'Iniciadores de conversación',
+                'Dar consejos',
+                'Expresar emociones',
+                'Disculparse o resolver conflictos',
+                'Defenderme',
+                'Interacciones románticas',
+                'Otro'
+            ],
+            datasets: [{
+                label: '% de usuarios de IA',
+                data: [60, 39, 18, 14, 13, 11, 11, 8, 1],
+                backgroundColor: [
+                    'rgba(108, 117, 125, 0.7)', 
+                    'rgba(40, 167, 69, 0.7)',
+                    'rgba(40, 167, 69, 0.4)',
+                    'rgba(40, 167, 69, 0.4)',
+                    'rgba(40, 167, 69, 0.4)',
+                    'rgba(40, 167, 69, 0.4)',
+                    'rgba(40, 167, 69, 0.4)',
+                    'rgba(40, 167, 69, 0.4)',
+                    'rgba(220, 53, 69, 0.7)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: function(value) {
+                            return value + '%'
+                        }
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+
+    // Chart G
+    const ctxG = document.getElementById('chartG').getContext('2d');
+    new Chart(ctxG, {
+        type: 'pie',
+        data: {
+            labels: ['Más tiempo con amigos', 'Mismo tiempo', 'Más tiempo con compañeros de IA', 'Sin respuesta'],
+            datasets: [{
+                data: [80, 13, 6, 1],
+                backgroundColor: ['rgba(0, 123, 255, 0.7)', 'rgba(255, 193, 7, 0.7)', 'rgba(220, 53, 69, 0.7)', 'rgba(108, 117, 125, 0.7)'],
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'top' },
+                tooltip: { callbacks: { label: (item) => `${item.label}: ${item.raw}%` } }
+            }
+        }
+    });
+
+    // Chart H
+    const ctxH = document.getElementById('chartH').getContext('2d');
+    new Chart(ctxH, {
+        type: 'pie',
+        data: {
+            labels: ['No, nunca', 'Sí'],
+            datasets: [{
+                data: [66, 34],
+                backgroundColor: ['rgba(40, 167, 69, 0.7)', 'rgba(220, 53, 69, 0.7)'],
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'top' },
+                tooltip: { callbacks: { label: (item) => `${item.label}: ${item.raw}%` } }
+            }
+        }
+    });
+
+    // Chart I
+    const ctxI = document.getElementById('chartI').getContext('2d');
+    new Chart(ctxI, {
+        type: 'pie',
+        data: {
+            labels: ['No, nunca', 'Sí', 'Sin respuesta'],
+            datasets: [{
+                data: [66, 33, 1],
+                backgroundColor: ['rgba(40, 167, 69, 0.7)', 'rgba(220, 53, 69, 0.7)', 'rgba(108, 117, 125, 0.7)'],
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'top' },
+                tooltip: { callbacks: { label: (item) => `${item.label}: ${item.raw}%` } }
+            }
+        }
+    });
+
+    // Chart J
+    const ctxJ = document.getElementById('chartJ').getContext('2d');
+    new Chart(ctxJ, {
+        type: 'pie',
+        data: {
+            labels: ['Nunca ha compartido', 'Alguna vez ha compartido', 'Sin respuesta'],
+            datasets: [{
+                data: [74, 24, 2],
+                backgroundColor: ['rgba(40, 167, 69, 0.7)', 'rgba(220, 53, 69, 0.7)', 'rgba(108, 117, 125, 0.7)'],
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'top' },
+                tooltip: { callbacks: { label: (item) => `${item.label}: ${item.raw}%` } }
+            }
+        }
+    });
+
+</script>
+</body>
+</html>
